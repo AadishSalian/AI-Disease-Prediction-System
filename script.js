@@ -33,4 +33,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Console greeting
     console.log("MediPredict AI System Loaded");
+
+    // Mobile Menu Toggle
+    const mobileBtn = document.querySelector('.mobile-menu-btn');
+    const navMenu = document.querySelector('.nav-menu');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    if (mobileBtn) {
+        mobileBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+
+            // Toggle icon between menu and close
+            const icon = mobileBtn.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.classList.remove('ri-menu-line');
+                icon.classList.add('ri-close-line');
+            } else {
+                icon.classList.remove('ri-close-line');
+                icon.classList.add('ri-menu-line');
+            }
+        });
+    }
+
+    // Close menu when a link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            const icon = mobileBtn.querySelector('i');
+            icon.classList.remove('ri-close-line');
+            icon.classList.add('ri-menu-line');
+        });
+    });
 });
