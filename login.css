@@ -82,7 +82,9 @@ section {
 /* Login Box */
 .login_box {
     position: relative;
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
+    /* Changed from fixed width */
     background: rgba(255, 255, 255, 0.9);
     border: 1px solid var(--border);
     height: auto;
@@ -94,6 +96,8 @@ section {
     backdrop-filter: blur(15px);
     box-shadow: var(--shadow-lg);
     padding: 2.5rem 2rem;
+    margin: 20px;
+    /* Add margin for mobile spacing */
 }
 
 form {
@@ -292,5 +296,13 @@ h2 {
 
     nav.navbar {
         padding: 20px;
+        position: relative;
+        /* Prevent overlap */
+        margin-bottom: 20px;
+    }
+
+    section {
+        min-height: auto;
+        padding-top: 20px;
     }
 }
