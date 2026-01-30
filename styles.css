@@ -82,6 +82,7 @@ h1 {
   font-size: 3.5rem;
   letter-spacing: -0.02em;
   background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -119,6 +120,13 @@ header .container {
   width: 100%;
 }
 
+.mobile-menu-btn {
+  display: none;
+  font-size: 1.5rem;
+  color: var(--secondary);
+  cursor: pointer;
+}
+
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
@@ -146,6 +154,12 @@ header .container {
 
 .nav-links a:hover {
   color: var(--primary);
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 .auth-buttons {
@@ -400,14 +414,88 @@ footer {
 }
 
 /* Responsive */
+
+/* Tablet & Smaller Laptops */
+@media (max-width: 1024px) {
+  .hero-content {
+    gap: 2rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .features-grid,
+  .steps-container {
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile & Tablets */
 @media (max-width: 768px) {
   h1 {
     font-size: 2.5rem;
   }
 
+  .mobile-menu-btn {
+    display: block;
+    z-index: 1001;
+  }
+
+  /* Mobile Navigation */
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    height: 100vh;
+    background: white;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    padding: 80px 2rem 2rem;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--surface-alt);
+    text-align: left;
+  }
+
+  .auth-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .auth-buttons .btn-secondary,
+  .auth-buttons .btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+
   .hero-content {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 3rem;
   }
 
   .hero-text p {
@@ -419,18 +507,44 @@ footer {
     justify-content: center;
   }
 
-  .nav-links {
-    display: none;
-    /* In a real app we'd add a hamburger menu */
-  }
+
+
+  /* Add auth buttons to mobile menu via JS or simpler: hide default header ones */
 
   .steps-container {
     grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
   }
 
   .footer-content {
     grid-template-columns: 1fr;
     gap: 2rem;
+    text-align: center;
+  }
+
+  .footer-brand,
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .hero-card {
+    padding: 1.5rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
   }
 }
 
