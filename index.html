@@ -26,7 +26,10 @@
                     <li><a href="#about">About</a></li>
                 </ul>
             </nav>
-            <a href="#" class="btn-primary">Get Started</a>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn-secondary">Log In</a>
+                <a href="signup.html" class="btn-primary">Register</a>
+            </div>
         </div>
     </header>
 
@@ -38,8 +41,9 @@
                 <p>Harness the power of machine learning to predict potential health risks before they become critical.
                     Fast, accurate, and secure.</p>
                 <div class="cta-group">
-                    <button class="btn-primary">Start Analysis</button>
-                    <button class="btn-secondary">View Demo</button>
+                    <button class="btn-primary" onclick="window.location.href='signup.html'">Start Analysis</button>
+                    <button class="btn-secondary" onclick="window.location.href='index.html#features'">View
+                        Demo</button>
                 </div>
             </div>
             <div class="hero-image fade-in">
@@ -146,8 +150,8 @@
         <div class="container fade-in">
             <h2>Ready to take control of your health?</h2>
             <p>Join thousands of users who trust MediPredict for their early health warning system.</p>
-            <button class="btn-secondary" style="background: white; color: var(--secondary); border: none;">Create Free
-                Account</button>
+            <button class="btn-secondary" style="background: white; color: var(--secondary); border: none;"
+                onclick="window.location.href='signup.html'">Create Free Account</button>
         </div>
     </section>
 
