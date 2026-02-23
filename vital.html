@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Vital Signs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="symptoms.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="top-bar">
+        <div class="logo">
+            <span class="icon"></span>
+            <div>
+                <i class="ri-pulse-line"></i>
+                <span>Medi</span>Predict
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>🩺 Vital Signs (Optional)</h2>
+            <p class="subtitle">If you have access to these measurements, they can improve prediction accuracy</p>
+        </section>
+
+        <section class="grid">
+            <!-- Body Temperature -->
+            <div class="symptom-card">
+                <h3><i class="ri-temp-hot-line"></i> Body Temperature</h3>
+                <p class="subtitle" style="font-size: 0.85rem; margin-bottom: 15px;">Normal range: 36.1°C - 37.2°C</p>
+                <div class="vital-inputs">
+                    <div class="vital-input-group with-unit">
+                        <input type="number" step="0.1" placeholder="36.5" id="temperature">
+                        <span class="unit">°C</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blood Pressure -->
+            <div class="symptom-card">
+                <h3><i class="ri-heart-pulse-line"></i> Blood Pressure</h3>
+                <p class="subtitle" style="font-size: 0.85rem; margin-bottom: 15px;">Normal: &lt;120/80 mmHg</p>
+                <div class="vital-inputs">
+                    <div class="vital-input-group">
+                        <label for="systolic">Systolic</label>
+                        <input type="number" placeholder="120" id="systolic">
+                    </div>
+                    <div class="vital-input-group">
+                        <label for="diastolic">Diastolic</label>
+                        <input type="number" placeholder="80" id="diastolic">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Heart Rate -->
+            <div class="symptom-card">
+                <h3><i class="ri-heart-3-line"></i> Heart Rate</h3>
+                <p class="subtitle" style="font-size: 0.85rem; margin-bottom: 15px;">Normal: 60-100 bpm (at rest)</p>
+                <div class="vital-inputs">
+                    <div class="vital-input-group with-unit">
+                        <input type="number" placeholder="72" id="heart-rate">
+                        <span class="unit">bpm</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tips (Using wide-card to span if grid allows) -->
+            <div class="symptom-card wide-card">
+                <div class="tips-box">
+                    <h3>Measurement Tips</h3>
+                    <ul>
+                        <li>Take temperature orally for most accurate reading</li>
+                        <li>Measure blood pressure after sitting quietly for 5 minutes</li>
+                        <li>Count heart rate while resting (not immediately after activity)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="actions">
+            <button class="back">← Back</button>
+            <button class="next analyze">Analyze Symptoms →</button>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MediPredict AI. All rights reserved. Aadish and Akash</p>
+        </div>
+        <div class="footer-bottom2">
+            <p>The information provided by this tool is not intended to be a substitute for professional medical advice,
+                diagnosis, or treatment.</p>
+            <p>Always seek the advice of your physician or other qualified health provider</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Symptoms</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="symptoms.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="top-bar">
+    <div class="logo">
+      <span class="icon"></span>
+      <div>
+        <i class="ri-pulse-line"></i>
+        <span>Medi</span>Predict
+      </div>
+    </div>
+  </header>
+
+
+  <main class="container">
+    <section class="card">
+      <h2>🩺 Symptoms</h2>
+      <p class="subtitle">Select all symptoms you're currently experiencing</p>
+
+      <div class="search-wrapper">
+        <i class="ri-search-line search-icon"></i>
+        <input type="text" id="search" placeholder="Search symptoms..." />
+        <button id="clear-search" class="clear-btn" title="Clear search">
+          <i class="ri-close-circle-fill"></i>
+        </button>
+      </div>
+
+      <div class="search-info">
+        <div class="results-count" id="results-count" style="display: none;">
+          <span class="count-number">0</span> symptoms found
+        </div>
+      </div>
+
+      <p id="no-results" class="no-results" style="display: none;">
+        <i class="ri-search-eye-line"></i> No symptoms found matching your search.
+      </p>
+
+      <div class="duration">
+        <label>How long have you had these symptoms?</label>
+        <select>
+          <option>Select duration</option>
+          <option>Less than 24 hours</option>
+          <option>1–3 days</option>
+          <option>1 week</option>
+          <option>More than a week</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="grid">
+
+      <!-- General -->
+      <div class="symptom-card wide-card">
+        <h3><i class="ri-health-book-line"></i> General</h3>
+        <div class="symptom-options">
+          <label><input type="checkbox"> Fever</label>
+          <label><input type="checkbox"> Weakness</label>
+          <label><input type="checkbox"> Fatigue</label>
+          <label><input type="checkbox"> Weight loss</label>
+          <label><input type="checkbox"> Weight gain</label>
+          <label><input type="checkbox"> night sweats</label>
+          <label><input type="checkbox"> Chills</label>
+          <label><input type="checkbox"> Loss of appetite</label>
+        </div>
+      </div>
+
+      <!-- Head -->
+      <div class="symptom-card wide-card">
+        <h3><i class="ri-mental-health-line"></i> Head & Neurological</h3>
+        <div class="symptom-options">
+          <label><input type="checkbox"> Headache</label>
+          <label><input type="checkbox"> Confusion</label>
+          <label><input type="checkbox"> Fainting</label>
+          <label><input type="checkbox"> Tingling</label>
+          <label><input type="checkbox"> Dizziness</label>
+          <label><input type="checkbox"> Numbness</label>
+          <label><input type="checkbox"> Memory problems</label>
+          <label><input type="checkbox"> Blurred vision</label>
+        </div>
+      </div>
+
+      <!-- Respiratory -->
+      <div class="symptom-card wide-card">
+        <h3><i class="ri-lungs-line"></i> Respiratory</h3>
+        <div class="symptom-options">
+          <label><input type="checkbox"> Cough</label>
+          <label><input type="checkbox"> Wheezing</label>
+          <label><input type="checkbox"> Sore throat</label>
+          <label><input type="checkbox"> Nazal congestion</label>
+          <label><input type="checkbox"> Shortness of breath</label>
+          <label><input type="checkbox"> Chest tightness</label>
+          <label><input type="checkbox"> Runny nose</label>
+          <label><input type="checkbox"> Sneezing</label>
+        </div>
+      </div>
+
+      <!-- Cardiovascular -->
+      <div class="symptom-card wide-card">
+        <h3><i class="ri-heart-3-line"></i> Cardiovascular</h3>
+        <div class="symptom-options">
+          <label><input type="checkbox"> Chest pain</label>
+          <label><input type="checkbox"> Rapid heartbeat</label>
+          <label><input type="checkbox"> Swelling in legs</label>
+          <label><input type="checkbox"> Palpitations</label>
+          <label><input type="checkbox"> Slow heartbeat</label>
+          <label><input type="checkbox"> High blood pressure</label>
+        </div>
+      </div>
+
+      <!-- Digestive -->
+      <div class="symptom-card wide-card">
+        <h3><i class="ri-temp-hot-line"></i> Digestive</h3>
+        <div class="symptom-options">
+          <label><input type="checkbox"> Nausea</label>
+          <label><input type="checkbox"> Diarrhea</label>
+          <label><input type="checkbox"> Vomiting</label>
+          <label><input type="checkbox"> Abdominal pain</label>
+          <label><input type="checkbox"> Constipation</label>
+          <label><input type="checkbox"> Loss of appetite</label>
+          <label><input type="checkbox"> Bloating</label>
+          <label><input type="checkbox"> Heartburn</label>
+          <label><input type="checkbox"> Blood in stool</label>
+        </div>
+      </div>
+
+      <div class="symptom-card wide-card">
+        <h3><i class="ri-body-scan-line"></i> Musculoskeletal</h3>
+        <div class="symptom-options">
+          <label><input type="checkbox"> Joint pain</label>
+          <label><input type="checkbox"> Muscle aches</label>
+          <label><input type="checkbox"> Stiffness</label>
+          <label><input type="checkbox"> Swelling in joints</label>
+          <label><input type="checkbox"> Limited mobility</label>
+          <label><input type="checkbox"> Cramping</label>
+          <label><input type="checkbox"> Neck pain</label>
+        </div>
+      </div>
+
+      <div class="symptom-card wide-card">
+        <h3><i class="ri-hand-coin-line"></i> Skin</h3>
+        <div class="symptom-options">
+          <label><input type="checkbox"> Rash</label>
+          <label><input type="checkbox"> Hives</label>
+          <label><input type="checkbox"> Dry skin</label>
+          <label><input type="checkbox"> Slow wound healing</label>
+          <label><input type="checkbox"> Itching</label>
+          <label><input type="checkbox"> Skin decoloration</label>
+          <label><input type="checkbox"> Bruising Easily</label>
+        </div>
+      </div>
+
+      <!-- Mental -->
+      <div class="symptom-card wide-card">
+        <h3><i class="ri-brain-line"></i> Mental Health</h3>
+        <div class="symptom-options">
+          <label><input type="checkbox"> Anxiety</label>
+          <label><input type="checkbox"> Depression</label>
+          <label><input type="checkbox"> Insomnia</label>
+          <label><input type="checkbox"> Mood swings</label>
+          <label><input type="checkbox"> Difficulty in concentrating</label>
+          <label><input type="checkbox"> Irritability</label>
+        </div>
+      </div>
+    </section>
+    <section class="actions">
+      <button class="back">← Back</button>
+      <button class="next">Next →</button>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-bottom">
+      <p>&copy; 2026 MediPredict AI. All rights reserved.Aadish and Akash</p>
+    </div>
+    <div class="footer-bottom2">
+      <p>The information provided by this tool is not intended to be a substitute for professional medical advice,
+        diagnosis, or treatment.</p>
+      <p>Always seek the advice of your physician or other qualified health provider</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
